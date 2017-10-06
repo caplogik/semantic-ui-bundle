@@ -1,0 +1,15 @@
+services:
+    caplogik.semantic_ui.form.button_type_extension:
+        class: Caplogik\SemanticUIBundle\Form\Extension\ButtonTypeExtension
+        tags:
+            - { name: form.type_extension, extended_type: Symfony\Component\Form\Extension\Core\Type\ButtonType }
+
+    caplogik.semantic_ui.form.form_type_extension:
+        class: Caplogik\SemanticUIBundle\Form\Extension\FormTypeExtension
+        tags:
+            - { name: form.type_extension, extended_type: Symfony\Component\Form\Extension\Core\Type\FormType }
+
+    caplogik.semantic_ui.form.hidden_type_extension:
+        class: Caplogik\SemanticUIBundle\Form\Extension\HiddenTypeExtension
+        tags:
+            - { name: form.type_extension, extended_type: Symfony\Component\Form\Extension\Core\Type\HiddenType }
