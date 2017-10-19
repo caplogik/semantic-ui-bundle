@@ -126,11 +126,17 @@
 {%- endblock form_start -%}
 
 {%- block form_rows -%}
-    <div {{- block('widget_csui_group') -}}>
+    {%- if csui_group is not same as(false) -%}
+        <div {{- block('widget_csui_group') -}}>
+            {% for child in form %}
+                {{- form_row(child) -}}
+            {% endfor %}
+        </div>
+    {% else %}
         {% for child in form %}
             {{- form_row(child) -}}
         {% endfor %}
-    </div>
+    {% endif %}
 {%- endblock form_rows -%}
 
 {%- block form_errors -%}
